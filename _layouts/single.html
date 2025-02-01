@@ -20,8 +20,12 @@ layout: default
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
-    {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date: "%B %d, %Y" }}">{% endif %}
-    {% if page.modified %}<meta itemprop="dateModified" content="{{ page.modified | date: "%B %d, %Y" }}">{% endif %}
+    {% if page.date and page.collection == 'posts' %}
+      <meta itemprop="datePublished" content="{{ page.date | date: "%B %d, %Y" }}">
+    {% endif %}
+    {% if page.modified %}
+      <meta itemprop="dateModified" content="{{ page.modified | date: "%B %d, %Y" }}">
+    {% endif %}
 
     <div class="page__inner-wrap">
       {% unless page.header.overlay_color or page.header.overlay_image %}
@@ -38,9 +42,25 @@ layout: default
           <p> {{ page.type }}, <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif page.venue and page.date %}
           <p>Published in <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
-        {% elsif page.date %}
+        {% elsif page.date and page.collection == 'posts' %}
           <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
-        {% endif %}    
+        {% endif %}
+        
+        {% if page.appurl and page.paperurl and page.repourl %}
+          <p><a href="{{ page.appurl }}">App</a> | <a href="{{ page.paperurl }}">Paper</a> | <a href="{{ page.repourl }}">Repo</a></p>
+        {% elsif page.appurl and page.paperurl %}
+          <p><a href="{{ page.appurl }}">App</a> | <a href="{{ page.paperurl }}">Paper</a></p>
+        {% elsif page.appurl and page.repourl %}
+          <p><a href="{{ page.appurl }}">App</a> | <a href="{{ page.repourl }}">Repo</a></p>
+        {% elsif page.paperurl and page.repourl %}
+          <p><a href="{{ page.paperurl }}">Paper</a> | <a href="{{ page.repourl }}">Repo</a></p>
+        {% elsif page.appurl %}
+          <p><a href="{{ page.appurl }}">App</a></p>
+        {% elsif page.paperurl %}
+          <p><a href="{{ page.paperurl }}">Paper</a></p>
+        {% elsif page.repourl %}
+          <p><a href="{{ page.repourl }}">Repo</a></p>
+        {% endif %}
         </header>
       {% endunless %}
 

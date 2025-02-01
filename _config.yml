@@ -8,10 +8,10 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Your Name / Site Title"
+title                    : "Sandy Preiss"
 title_separator          : "-"
-name                     : &name "Your Name"
-description              : &description "personal description"
+name                     : &name "Sandy Preiss"
+description              : &description "Data Scientist"
 url                      : https://sandypreiss.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "sandypreiss/sandypreiss.github.io"
@@ -21,10 +21,10 @@ repository               : "sandypreiss/sandypreiss.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "Preiss_Sandy_2024_headshot.jpg"
+  avatar           : "Preiss_Sandy_2024_headshot_square.jpg"
   name             : "Sandy Preiss"
   pronouns         : # example: "she/her"  
-  bio              : # none
+  bio              : "Data Scientist"
   location         : "North Carolina, USA"
   employer         : "RTI International"
   uri              : # URL
@@ -74,20 +74,18 @@ author:
   youtube          : # Username
   zhihu            : # Username
 
-# Publication Category - The following the list of publication categories and their headings
-publication_category:
-  books:
-    title: 'Books'
-  manuscripts:
-    title: 'Journal Articles'    
-  conferences:
-    title: 'Conference Papers'
+# Project Category - The following the list of project categories and their headings
+project_category:
+  work:
+    title: 'Selected Work Projects'
+  personal:
+    title: 'Personal Projects'    
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
-future                   : true
+future                   : false
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
 talkmap_link             : false      #change to true to add link to talkmap on talks page
 comments:
@@ -215,7 +213,7 @@ collections:
   teaching:
     output: true
     permalink: /:collection/:path/
-  publications:
+  projects:
     output: true
     permalink: /:collection/:path/
   portfolio:
@@ -255,10 +253,10 @@ defaults:
       author_profile: true
       share: true
       comments: true
-  # _publications
+  # _projects
   - scope:
       path: ""
-      type: publications
+      type: projects
     values:
       layout: single
       author_profile: true
