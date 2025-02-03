@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I'm a data scientist with over 10 years of experience using analytics to guide strategies and advance knowledge.
+I'm a data scientist with over 10 years of experience using analytics to inform decisions and advance knowledge.
 
 Currently, I'm a Data Science Manager at [RTI International](https://www.rti.org/)'s [Center for Data Science and AI](https://www.rti.org/solution/rti-center-data-science). I spend about 25% of my time supervising a team of five data scientists, guiding center-level strategy, and developing new business. I spend the rest as an individual contributor, applying machine learning methods to a variety of public health and social science domains.
 
@@ -17,15 +17,15 @@ I consider myself a generalist. I don't specialize in any one domain, data type,
 
 1. **Identify problems:** find pain points or knowledge gaps in current processes that could be solved with machine learning,
 1. **Ask the right questions:** to surface constraints and gotchas early, and
-1. **Identify solutions:** design and develop machine learning pipelines to solve the problems.
+1. **Identify solutions:** design and develop machine learning pipelines to solve problems.
 
 To date, most of my [projects](/projects/) have fallen into three broad technical areas:
 
-- **Applied natural language processing,** including a wide range of data sources (social media, survey, scientific); models (LLMs, BERT-based models, smaller specialized models); and problem spaces (information extraction, thematic analysis, Q&A systems).
+- **Applied natural language processing,** including a wide range of data sources (social media, survey, scientific); models (LLMs, BERT-based); and problem spaces (information extraction, thematic analysis, Q&A systems).
 - **Causal inference with observational data,** with an emphasis on the healthcare domain and EHR data.
 - **Microsimulation,** including agent-based and discrete-event models.
 
-I work with open-source languages and tools whenever possible. Most of my work is in Python and PySpark, with a sprinkle of R.
+I work with open-source languages and tools whenever possible. Most of my work is in Python and PySpark, with a sprinkle of SQL and R.
 
 Depending on the project, I've built products ranging from one-off analyses to Python packages and deployed apps.
 
